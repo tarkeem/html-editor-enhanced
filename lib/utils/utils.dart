@@ -7,7 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:html_editor_enhanced/utils/shims/dart_ui.dart';
-import 'dart:ui';
+import 'dart:ui' as uiii;
 /// small function to always check if mounted before running setState()
 void setState(
     bool mounted, void Function(Function()) setState, void Function() fn) {
@@ -1047,7 +1047,7 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
   Orientation _getOrientation(BuildContext context) {
     var result = MediaQuery.maybeOf(context)?.orientation;
     if (result == null) {
-      final Size size = window.physicalSize;
+      final Size size = uiii.window.physicalSize;
       result = size.width > size.height
           ? Orientation.landscape
           : Orientation.portrait;
