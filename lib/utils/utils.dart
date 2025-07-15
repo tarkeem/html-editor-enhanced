@@ -7,7 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:html_editor_enhanced/utils/shims/dart_ui.dart';
-
+import 'dart:ui';
 /// small function to always check if mounted before running setState()
 void setState(
     bool mounted, void Function(Function()) setState, void Function() fn) {
